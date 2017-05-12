@@ -36,8 +36,10 @@ public class Wallet {
 	        retVal.append(key + " has a balance of ");
 			retVal.append(df.format(card.getBalance()));
 			retVal.append(" and an interest of ");
-			retVal.append(df.format(card.calculateFinanceCharge()));
+			retVal.append(df.format(card.getInterest() * 100));
 			retVal.append(" % ");
+			retVal.append(" and an interest charge of ");
+			retVal.append(df.format(card.calculateFinanceCharge()));
 			retVal.append("\r\n");
 		}
 		
